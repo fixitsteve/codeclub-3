@@ -10,7 +10,7 @@
 
 var src_default = {
   async fetch(request, env, ctx) {
-    if(request.method ==post) {
+    if(request.method == 'post') {
            return new Response('Hello worker!', {
                headers: {
                    'content-type': 'application/json',
