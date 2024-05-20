@@ -9,13 +9,11 @@ var src_default = {
             4: "Random Response 4",
             };
 
-            function getRandomNumber(min, max) {
-                const minCeiled = Math.ceil(1);
-                const maxFloored = Math.floor(4);
-                return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
+            function getRandomNumber(max) {
+                return Math.floor(Math.random() * max);
             };
 
-           return new Response(workerResponseMap[getRandomNumber()], {
+           return new Response(workerResponseMap[getRandomNumber(4)], {
                headers: {
                    'content-type': 'application/json',
                },
